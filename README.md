@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# SkuSuks React Refactor 
+This project is a React refactor of the original SkuSuks e-commerce application. Originally designed as a multi-page 
+website, this application has evolved into a Shopify storefront template where client's credentials will be added and saved in a private .env file. 
+This project was bootstrapped with Create React App. Reusable React components replace the static HTML structure, state management manipulates the DOM, 
+and a mobile-first design was implemented. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Folder List 
+- data: parent folder for JSON data used for testing 
+    - db.json: A collection of JSON objects used to test component rendering 
+- public: houses all public files to be served 
+        - images: houses all relevant background, logo, product, and cycler images for all components
+        - index.html: parent HTML structure - connecting point for Root component
+        - manifest.json: stock base file from Create React App 
+        - robots.txt: stock .txt file from Create React App
+        
+            -
+        - template.html: A boilerplate file for new page generation. It does not pertain to the template story for this project.
 
-## Available Scripts
+- src: parent folder for components, stylesheets, and hooks
+    - Styles: houses the stylesheets for the program 
+            - contact.css: styles for the contact form page 
+            - imageCycler.css: style rules for image cycler component 
+            - index.css: base style rules for component and page structure
+            - navbar.css: stylesheet specifically for the navbar component
+            - pages.css: style rules for all pages/components (i.e. Donate, Apparel, Accessories, etc.) 
+            - textStyles.css: style rules for formatting text elements 
+    - Components: parent folder for all components (excluding Shopify specific and Root)
+        - Accessories.js: renders the Accessory component. 
+            - _Currently loads data from a local host JSON server, waiting for Shopify credentials to update_
+        - App.js: parent component. Handles routes for all components within the application.  
+        - Apparel.js: renders the Accessory component
+            - _Currently loads data from a local host JSON server, waiting for Shopify credentials to update_
+        - Contact.js: renders the contact form, utilizing state management for form inputs
+        - Donate.js: renders the donate radio form, utilizing state management and onChange methodology
+        - Footer.js: reusable footer component across all pages 
+        - Home.js: renders the home page of the application, with a nested image cycler 
+        - ImageCycler.js: reusable component to render a collection of images the user can cycle through 
+        - Mission.js: mission statement component on the home page  
+        - NavMenu.js: reusable nav bar and menu component across all pages  
+        - NewDrops.js: renders the new drops component, with a nested image cycler 
+        - PreOrder.js: renders the pre order component, with a nested image cycler
+        - ProductCard.js: renders a single product card to be displayed
+        - Products.js: reusable component for the apparel and accessory pages. Maps through an array of ProductCard components
+        - RadioButton.js: reusable component for radio buttons, nested in the donate component
+    - Hooks: parent folder for custom, reusable hooks 
+        - useClickOutside.js: targets specific click events to close/hide elements 
+        - useFetch.js: fetches data from a resource via a url parameter 
+            - used to fetch JSON test data
+    - Shopify: parent folder for Shopify Storefront API 
+        - ShopifyClient.js: constructor for the Shopify client
+            - Uses .env variables for domain, version, and token values 
+        - useShopifyProducts.js: custom query and hook to gather product data from Shopify 
+    - index.js: Renders the app - acts as the connecting point between the app and the browser 
+    - App.test.js: stock test file from Create React App
+    - setupTests.js: stock test file from Create React App
+- .gitignore: A list of files intentionally ignored by Git 
+- package.json: Defines the project dependencies and scripts necessary for program execution
+- package-lock.json: Locks project dependency versions for consistent installations 
 
-In the project directory, you can run:
+# How To Run 
+- Open the root folder in VS Code (or preferred code editor) 
+    - SkuSuks-React-Refactor 
+- Open two (2) terminal windows (CTRL + `)
+    - In the first terminal window, run the following commands: 
+        - _To install the necessary dependencies_: npm install 
+        - _To start the JSON server to retrieve data: npx json-server --watch data/db.json --port 8000     
+    - In the second terminal window, run the following command: 
+        - _To start the application_: npm run start 
+- If not automatically redirected, open a browser of your choice and navigate to: 
+    - http://localhost:3000
 
-### `npm start`
+# When Running
+- Once a browser window is opened with the above URL, the SkuSuks (HSW) Page will appear. 
+- This application features client-side input validation, menu toggles, real-time input reading, and the rendering of dynamic React components. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Known Limitations 
+- Shopify credentials from the client are pending. Once received, JSON data will be replaced with dynamic Shopify collection queries. 
+- Contact form will integrate email functionality using EmailJS
+- One final styling pass based on client feedback 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Tools Used 
+- VS Code 
+- GitHub
+- NPM
+- React
+- Shopify Storefront API
