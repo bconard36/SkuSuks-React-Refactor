@@ -20,7 +20,7 @@ const Donate = () => {
                 <h3 className="page-header">Empower the Next Generation</h3>
             </div>
             <div className="donate-hero-image-container">
-                <img src="./donate2.jpg" alt="A group of kids gathered together" className="donate-hero-image" />
+                <img src="../../Images/donate2.jpg" alt="A group of kids gathered together" className="donate-hero-image" />
             </div>
             <div className="donate-statement-container">
                 <p>Your donation helps us provide educational resources and opportunities for the youth in our community.</p>
