@@ -36,23 +36,39 @@
 /*  ===============================================
     Style Rules for Accessory and Apparel Pages
     ===============================================*/
-.product, .product-container {
+.product-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 10px;
   width: 100%;
 }
 
-.product:last-of-type {
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
   padding-bottom: 20px;
+  border-radius: 8px;
+}
+
+.product-container > .product {
+  align-self: stretch;
 }
 
 .product-image-container {
   border-radius: 8px;
-  width: 80%;
+  width: 60%;
   padding: 20px;
+}
+
+div:has(.product) {
+  padding: 10px;
 }
 
 .product-image {
@@ -265,8 +281,8 @@ fieldset, legend, label, input {
     }
 
     .product-image-container {
-        width: 260px;
-        height: 260px;
+        width: 90%;
+        height: auto;
         padding: 24px;
     }
 
@@ -318,7 +334,7 @@ fieldset, legend, label, input {
     .product-container {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         gap: 5px;
         max-width: min(90vw, 1200px);
         margin: 0 auto;
@@ -337,42 +353,42 @@ fieldset, legend, label, input {
 
     /* Donate */
     .donate-hero-image-container {
-    width: 75vw;
-    max-width: 900px;
-  }
+      width: 75vw;
+      max-width: 900px;
+    }
 
-  .donate-hero-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+    .donate-hero-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-  .donate-statement-container {
-    width: 70vw;
-    max-width: 700px;
-  }
+    .donate-statement-container {
+      width: 70vw;
+      max-width: 700px;
+    }
 
-  .donate-statement-container p {
-    font-size: 1.25rem;
-    font-weight: 400;
-    max-width: 800px;
-    text-wrap: balance;
-  }
+    .donate-statement-container p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      max-width: 800px;
+      text-wrap: balance;
+    }
 
-  #donation-legend {
-    font-size: 1.5rem;
-  }
+    #donation-legend {
+      font-size: 1.5rem;
+    }
 
-  .donation-selection {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-  }
+    .donation-selection {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
 
-  .donation-container {
-    width: 75vw;
-    max-width: 900px;
-  }
+    .donation-container {
+      width: 75vw;
+      max-width: 900px;
+    }
 }
