@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
   background-image: url("../../public/Images/HSW_Logo2.png");
   background-repeat: repeat;
   background-position: center;
