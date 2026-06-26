@@ -68,7 +68,7 @@ const Contact = () => {
                             ></textarea>
                         </div>
                         <button id="submit" type="submit">Submit</button>
-                        <img src="./alternate_skusucks_logo.png" alt="A SkuSuks alternate logo" id="form-graphic"></img>
+                        <img src="../../Images/alternate_skusucks_logo.png" alt="A SkuSuks alternate logo" id="form-graphic"></img>
                     </fieldset>
                 </form>
             </div>
