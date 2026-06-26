@@ -73,6 +73,7 @@ fieldset {
 
 .contact-form input::placeholder, .contact-form textarea::placeholder {
   color: #CCC;
+  font-size: 1.1rem;
 }
 
 /* Submit Button */
