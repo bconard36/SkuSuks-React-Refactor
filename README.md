@@ -54,7 +54,7 @@ and a mobile-first design was implemented.
 - package-lock.json: Locks project dependency versions for consistent installations 
 
 # How To Run 
-- _To view the productio build_:
+- _To view the production build_:
     - https://sku-suks-react-refactor.vercel.app/
 
 - _To launch via VS Code_:
