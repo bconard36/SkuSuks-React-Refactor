@@ -4,7 +4,7 @@ import ImageCycler from './ImageCycler';
 const NewDrops = () => {
 
     // Store hero images for home page cycler
-    const [newDrops, setNewDrops] = useState([
+    const newDrops = useState([
         { src: '../../Images/newDrop1.jpg', alt: 'A collection of T-Shirts hanging in a store, with only the front in focus.', id: 1 },
         { src: '../../Images/newDrop3.jpg', alt: 'A young woman sitting in a chair smiling with her limbs stretched out holding clothes.', id: 2 }
     ]);
