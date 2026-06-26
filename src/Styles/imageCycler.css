@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  max-width: 60vw;
-  width: 60vw;
+  max-width: 80vw;
+  width: 80vw;
   height: auto;
   margin: 20px auto;
   padding-top: 20px;
@@ -63,7 +63,7 @@
 .cycler-images img {
   width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height: 800px;
   display: none;
   border-radius: 8px;
   padding: 3px;
