@@ -83,12 +83,12 @@ fieldset {
   border-radius: 4px;
   padding: 10px 15px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   transition: background 0.2s;
   display: block;
   margin: 40px auto 0 auto;
   width: 60%;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -107,6 +107,10 @@ fieldset {
   #form-graphic {
     max-width: 60%;
   }
+
+  .contact-form input::placeholder, .contact-form textarea::placeholder, #submit, .form-group label {
+    font-size: 1.25rem;
+  }
 }
 
 /* Style Rules for Desktop Viewport */
@@ -114,6 +118,10 @@ fieldset {
   .contact-form-container {
     width: 70%;
     max-width: 700px;
+  }
+
+  .contact-form input::placeholder, .contact-form textarea::placeholder, #submit, .form-group label {
+    font-size: 1.345rem;
   }
 
 }
