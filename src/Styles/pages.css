@@ -48,13 +48,14 @@
 .product {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.875);
   padding-bottom: 20px;
   border-radius: 8px;
+  margin: 0 auto;
 }
 
 .product-container > .product {
@@ -63,8 +64,15 @@
 
 .product-image-container {
   border-radius: 8px;
-  width: 60%;
+  width: 90%;
   padding: 20px;
+}
+
+.product p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Libertinus Serif Display", system-ui;
+  padding: 5px;
 }
 
 div:has(.product) {
@@ -75,6 +83,20 @@ div:has(.product) {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);;
+}
+
+.order-button {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #FFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Pridi", serif;
+  width: 50%;
+  font-size: 1.1rem;
+  margin: 5px auto;
 }
 
 /*  ===============================================
@@ -280,6 +302,11 @@ fieldset, legend, label, input {
         max-width: 340px;
     }
 
+    .product p {
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+
     .product-image-container {
         width: 90%;
         height: auto;
@@ -335,7 +362,7 @@ fieldset, legend, label, input {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 5px;
+        gap: 24px;
         max-width: min(90vw, 1200px);
         margin: 0 auto;
     }
@@ -343,6 +370,11 @@ fieldset, legend, label, input {
     .product {
         flex: 1 1 30%;
         max-width: 360px;
+    }
+
+    .product p {
+        font-weight: 500;
+        font-size: 1.5rem;
     }
 
     .product-image-container {
