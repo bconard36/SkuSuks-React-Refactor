@@ -60,12 +60,9 @@ and a mobile-first design was implemented.
 - _To launch via VS Code_:
     - Open the root folder in VS Code (or preferred code editor) 
         - SkuSuks-React-Refactor 
-    - Open two (2) terminal windows (CTRL + `)
-        - In the first terminal window, run the following commands: 
-            - _To install the necessary dependencies_: npm install 
-            - _To start the JSON server to retrieve data: npx json-server --watch data/db.json --port 8000     
-        - In the second terminal window, run the following command: 
-            - _To start the application_: npm run start 
+    - Open a terminal window (CTRL + `)
+        - _To install the necessary dependencies_: npm install  
+        - _To start the application_: npm run start 
     - If not automatically redirected, open a browser of your choice and navigate to: 
         - http://localhost:3000
 
