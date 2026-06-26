@@ -13,33 +13,31 @@ const ProductCard = ({ product }) => {
     // }
 
     return ( 
-        <div>
-            <div className="product">
-                <div className="product-image-container">
-                    <img
-                    src={product.image}
-                    alt={product.alt || product.title}
-                    className="product-image"
-                    />
-                </div>
-
-                <h3>{product.name}</h3>
-                <p>
-                    {product.price}
-                </p>
-                {/* 
-                Once Shopify is connected, use below
-                <h3>{product.title}</h3>
-                <p>
-                    {product.price?.amount 
-                    ? `${product.price?.amount} ${product.price?.currencyCode}`
-                    : "Price Unavailable"}
-                </p> */}
-
-                <button className="order-button">
-                    Order Now
-                </button>
+        <div className="product">
+            <div className="product-image-container">
+                <img
+                src={product.image}
+                alt={product.alt || product.title}
+                className="product-image"
+                />
             </div>
+
+            <h3>{product.name}</h3>
+            <p>
+                {product.price}
+            </p>
+            {/* 
+            Once Shopify is connected, use below
+            <h3>{product.title}</h3>
+            <p>
+                {product.price?.amount 
+                ? `${product.price?.amount} ${product.price?.currencyCode}`
+                : "Price Unavailable"}
+            </p> */}
+
+            <button className="order-button">
+                Order Now
+            </button>
         </div>
      );
 }
